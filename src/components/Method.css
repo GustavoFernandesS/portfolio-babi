@@ -3,30 +3,31 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: clamp(1.75rem, 3.5vw, 2.75rem);
+  gap: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .method__step {
-  padding-top: 1.15rem;
-  border-top: 2px solid var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: clamp(1.2rem, 2.4vw, 1.6rem);
 }
 
 .method__key {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  color: var(--indigo);
+  font-family: var(--type);
+  font-size: 0.78rem;
+  color: var(--rose);
 }
 
 .method__title {
-  font-size: 1.4rem;
-  margin-top: 0.55rem;
+  font-size: 1.35rem;
+  margin-top: 0.5rem;
 }
 
 .method__body {
-  margin-top: 0.75rem;
-  color: var(--ink-soft);
-  max-width: 40ch;
+  margin-top: 0.7rem;
+  color: var(--wine-soft);
+  font-size: 0.98rem;
 }
 
 @media (min-width: 820px) {

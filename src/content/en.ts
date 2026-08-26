@@ -21,15 +21,20 @@ export const en: Content = {
   },
 
   hero: {
-    eyebrow: "HR and organizational behavior · São Paulo, Brazil",
+    eyebrow: "Professional record",
     name: "Barbara Paschoalini",
-    role: "Project Consultant · Consultoria RH Junior",
+    fields: [
+      { label: "role", value: "Project Consultant, Consultoria RH Junior" },
+      { label: "studies", value: "Psychology · Mackenzie · 4th semester" },
+      { label: "languages", value: "Fluent English · Intermediate Spanish" },
+      { label: "based in", value: "São Paulo · on-site, hybrid or remote" },
+    ],
     thesis: "I turn people diagnostics into a process the team can run without me.",
     body: "I study Psychology at Mackenzie, fourth semester. I joined Consultoria RH Junior — a student-run consultancy from FGV and Mackenzie — as a trainee in March 2026, and became a Project Consultant in June. Today I run recruiting, engagement, performance review and career path projects for client companies: from the diagnosis to the leadership debrief.",
     primaryCta: "Get in touch",
     secondaryCta: "LinkedIn",
     resumeCta: "Résumé (PDF)",
-    status: "Open to internships in recruiting, talent acquisition and org development",
+    status: "Open to HR and talent acquisition internships",
   },
 
   profile: {

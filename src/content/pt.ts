@@ -21,15 +21,20 @@ export const pt: Content = {
   },
 
   hero: {
-    eyebrow: "RH e comportamento organizacional · São Paulo",
+    eyebrow: "Registro profissional",
     name: "Barbara Paschoalini",
-    role: "Consultora de Projetos · Consultoria RH Junior",
+    fields: [
+      { label: "cargo", value: "Consultora de Projetos, Consultoria RH Junior" },
+      { label: "formação", value: "Psicologia · Mackenzie · quarto semestre" },
+      { label: "idiomas", value: "Inglês fluente · Espanhol intermediário" },
+      { label: "base", value: "São Paulo · presencial, híbrido ou remoto" },
+    ],
     thesis: "Transformo diagnóstico de pessoas em processo que a equipe roda sem mim.",
-    body: "Estudo Psicologia no Mackenzie, 4º semestre. Entrei como trainee na Consultoria RH Junior — empresa júnior formada por alunos da FGV e do Mackenzie — em março de 2026, e cheguei a Consultora de Projetos em junho. Hoje conduzo projetos de recrutamento e seleção, clima, avaliação de desempenho e plano de carreira para empresas clientes: do diagnóstico à devolutiva para a liderança.",
+    body: "Estudo Psicologia no Mackenzie, no quarto semestre. Entrei como trainee na Consultoria RH Junior — empresa júnior formada por alunos da FGV e do Mackenzie — em março de 2026, e cheguei a Consultora de Projetos em junho. Hoje conduzo projetos de recrutamento e seleção, clima, avaliação de desempenho e plano de carreira para empresas clientes: do diagnóstico à devolutiva para a liderança.",
     primaryCta: "Falar comigo",
     secondaryCta: "LinkedIn",
     resumeCta: "Currículo (PDF)",
-    status: "Aberta a estágio em R&S, Talent Acquisition e Desenvolvimento Organizacional",
+    status: "Aberta a estágio em RH e Talent Acquisition",
   },
 
   profile: {
@@ -96,7 +101,7 @@ export const pt: Content = {
         role: "Graduação em Psicologia",
         org: "Universidade Presbiteriana Mackenzie",
         period: "fev 2025 — nov 2030",
-        body: "4º semestre. Interesse acadêmico em neuropsicologia, cognição e comportamento humano — a base de como as pessoas decidem e aprendem dentro de uma estrutura de trabalho. Atuei também na organização da Semana da Psicologia, nas áreas de administração e comunicação.",
+        body: "Quarto semestre. Interesse acadêmico em neuropsicologia, cognição e comportamento humano — a base de como as pessoas decidem e aprendem dentro de uma estrutura de trabalho. Atuei também na organização da Semana da Psicologia, nas áreas de administração e comunicação.",
       },
     ],
   },
@@ -118,7 +123,7 @@ export const pt: Content = {
           "Entregamos o plano e mais um Guia de Implementação que não estava no escopo: o passo a passo de como aplicar a trilha. O plano deixou de ser um PDF e virou algo que a empresa consegue rodar sozinha.",
       },
       {
-        label: "Desafio de consultoria · 1º lugar",
+        label: "Desafio de consultoria · primeiro lugar",
         title: "Blueprint",
         context:
           "Desafio entre grupos: analisar um problema real de negócio e defender uma proposta estratégica diante de uma banca.",

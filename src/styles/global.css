@@ -1,34 +1,33 @@
 /* ============================================================
-   Barbara Paschoalini — design tokens
-   Concept: "ficha de perfil profissional" (assessment sheet)
+   Barbara Paschoalini
+   Conceito: ficha de registro profissional — rótulo datilografado,
+   valor em serifa pesada, abas de arquivo separando as seções.
    ============================================================ */
 
 :root {
-  /* Color */
-  --ink: #14161f;
-  --ink-soft: #474d63;
-  --mist: #868da6;
-  --paper: #e9ebf2;
-  --paper-deep: #dfe2ee;
-  --card: #fbfbfd;
-  --rule: #d1d6e6;
-  --indigo: #2a31a8;
-  --indigo-tint: #e3e5f7;
-  --rose: #b23a63;
-  --rose-tint: #f6e4ea;
+  /* Cor — rosa claro quente, tinta vinho, um único acento cromático */
+  --blush: #f8ebec;
+  --blush-deep: #f0d9dc;
+  --paper: #fffbfb;
+  --wine: #2e1a1f;
+  --wine-soft: #6e4c54;
+  --mist: #a98d93;
+  --rule: #e2c9cd;
+  --rose: #c2415f;
+  --rose-tint: #f6dfe4;
 
-  /* Type */
-  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --body: "Newsreader", Georgia, "Times New Roman", serif;
-  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  /* Tipo */
+  --display: "Young Serif", Georgia, "Times New Roman", serif;
+  --body: "Karla", "Segoe UI", system-ui, sans-serif;
+  --type: "Courier Prime", "Courier New", ui-monospace, monospace;
 
-  /* Space & measure */
-  --gutter: clamp(1.25rem, 5vw, 5rem);
-  --stack: clamp(4.5rem, 9vw, 8.5rem);
-  --max: 1240px;
-  --radius: 3px;
+  /* Espaço e medida */
+  --gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --stack: clamp(4rem, 8vw, 7.5rem);
+  --max: 1180px;
+  --radius: 12px;
 
-  /* Motion */
+  /* Movimento */
   --ease: cubic-bezier(0.22, 0.75, 0.3, 1);
 }
 
@@ -45,12 +44,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--blush);
+  color: var(--wine);
   font-family: var(--body);
-  font-size: clamp(1rem, 0.97rem + 0.15vw, 1.09rem);
-  line-height: 1.62;
-  font-optical-sizing: auto;
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.08rem);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -59,9 +57,9 @@ h2,
 h3,
 h4 {
   font-family: var(--display);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.04;
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1.08;
   margin: 0;
   text-wrap: balance;
 }
@@ -86,24 +84,24 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--indigo);
+  outline: 2px solid var(--rose);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 ::selection {
   background: var(--rose);
-  color: #fff;
+  color: var(--paper);
 }
 
-/* ---------- shared primitives ---------- */
-
-/* Anchors must clear the sticky header. */
+/* Âncoras precisam passar por baixo do cabeçalho fixo. */
 .section,
 .contact,
 .hero {
   scroll-margin-top: 84px;
 }
+
+/* ---------- primitivas ---------- */
 
 .shell {
   width: 100%;
@@ -112,46 +110,90 @@ button {
   padding-inline: var(--gutter);
 }
 
-.eyebrow {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--indigo);
+/* Rótulo datilografado: o vocabulário da ficha. */
+.label {
+  font-family: var(--type);
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  color: var(--mist);
   margin: 0;
 }
 
 .lede {
-  font-size: clamp(1.06rem, 1rem + 0.4vw, 1.28rem);
-  color: var(--ink-soft);
-  max-width: 58ch;
+  font-size: clamp(1.02rem, 0.98rem + 0.35vw, 1.2rem);
+  color: var(--wine-soft);
+  max-width: 56ch;
 }
 
-.rule {
-  height: 1px;
-  background: var(--rule);
-  border: 0;
-  margin: 0;
-}
-
-/* Marks content the site owner still has to supply. */
+/* Conteúdo que ainda falta preencher. */
 .todo {
   color: var(--rose);
-  border-bottom: 1px dashed currentColor;
-  font-family: var(--mono);
-  font-size: 0.86em;
-  letter-spacing: 0.01em;
+  background: var(--rose-tint);
+  box-decoration-break: clone;
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+  font-family: var(--type);
+  font-size: 0.9em;
 }
 
-/* ---------- reveal on scroll ---------- */
+/* ---------- botões ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--type);
+  font-size: 0.82rem;
+  text-decoration: none;
+  padding: 0.7rem 1.25rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  transition:
+    background 0.2s var(--ease),
+    color 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+}
+
+.btn--solid {
+  background: var(--wine);
+  color: var(--blush);
+}
+
+.btn--solid:hover {
+  background: var(--rose);
+}
+
+.btn--ghost {
+  border-color: var(--wine);
+  color: var(--wine);
+}
+
+.btn--ghost:hover {
+  border-color: var(--rose);
+  color: var(--rose);
+}
+
+.btn--plain {
+  padding-inline: 0.25rem;
+  color: var(--wine-soft);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--rule);
+}
+
+.btn--plain:hover {
+  color: var(--rose);
+  text-decoration-color: var(--rose);
+}
+
+/* ---------- reveal ---------- */
 
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(14px);
   transition:
-    opacity 0.7s var(--ease),
-    transform 0.7s var(--ease);
+    opacity 0.6s var(--ease),
+    transform 0.6s var(--ease);
 }
 
 .reveal.is-in {
@@ -178,17 +220,17 @@ button {
   }
 }
 
-/* ---------- skip link ---------- */
+/* ---------- pular para o conteúdo ---------- */
 
 .skip {
   position: absolute;
   left: -9999px;
   top: 0;
   z-index: 100;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--wine);
+  color: var(--blush);
   padding: 0.75rem 1rem;
-  font-family: var(--mono);
+  font-family: var(--type);
   font-size: 0.8rem;
 }
 

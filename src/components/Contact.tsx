@@ -10,7 +10,7 @@ export function Contact({ content }: { content: Content }) {
     <section className="contact" id="contato">
       <div className="shell contact__inner">
         <div className="contact__lead reveal">
-          <p className="eyebrow contact__eyebrow">{contact.eyebrow}</p>
+          <p className="contact__eyebrow">{contact.eyebrow}</p>
           <h2 className="contact__title">{contact.title}</h2>
           <p className="contact__body">{contact.body}</p>
           <a

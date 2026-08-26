@@ -66,7 +66,8 @@ export interface Content {
   hero: {
     eyebrow: string;
     name: string;
-    role: string;
+    /** Campos da ficha, rotulados. Ordem importa: cargo primeiro. */
+    fields: { label: string; value: string }[];
     thesis: string;
     body: string;
     primaryCta: string;

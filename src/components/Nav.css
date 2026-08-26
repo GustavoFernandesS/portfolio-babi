@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  background: color-mix(in srgb, var(--blush) 90%, transparent);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
   transition:
@@ -12,95 +12,92 @@
 
 .nav--stuck {
   border-bottom-color: var(--rule);
-  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  background: color-mix(in srgb, var(--blush) 95%, transparent);
 }
 
 .nav__inner {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  min-height: 66px;
+  min-height: 64px;
 }
 
 .nav__mark {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.55rem;
   text-decoration: none;
-  color: var(--ink);
+  color: var(--wine);
   margin-right: auto;
 }
 
 .nav__glyph {
   width: 24px;
   height: 24px;
-  color: var(--indigo);
+  color: var(--rose);
   flex: none;
 }
 
 .nav__glyph-mark {
-  fill: var(--rose);
+  fill: var(--wine);
 }
 
 .nav__name {
   font-family: var(--display);
-  font-weight: 600;
-  font-size: 0.98rem;
-  letter-spacing: -0.015em;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .nav__links {
   display: none;
-  gap: 1.6rem;
+  gap: 1.5rem;
 }
 
 .nav__link {
-  font-family: var(--mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
+  font-family: var(--type);
+  font-size: 0.82rem;
+  color: var(--wine-soft);
   text-decoration: none;
-  padding-block: 0.35rem;
+  padding-block: 0.3rem;
   border-bottom: 1px solid transparent;
-  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+  transition:
+    color 0.2s var(--ease),
+    border-color 0.2s var(--ease);
 }
 
 .nav__link:hover {
-  color: var(--indigo);
-  border-bottom-color: var(--indigo);
+  color: var(--rose);
+  border-bottom-color: var(--rose);
 }
 
 .nav__lang {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.3rem;
   background: none;
   border: 1px solid var(--rule);
   border-radius: 999px;
-  padding: 0.32rem 0.7rem;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
+  padding: 0.3rem 0.7rem;
+  font-family: var(--type);
+  font-size: 0.76rem;
   color: var(--mist);
   cursor: pointer;
   transition: border-color 0.2s var(--ease);
 }
 
 .nav__lang:hover {
-  border-color: var(--indigo);
+  border-color: var(--rose);
 }
 
 .nav__lang .is-on {
-  color: var(--indigo);
-  font-weight: 500;
+  color: var(--rose);
 }
 
 .nav__slash {
   opacity: 0.5;
 }
 
-@media (min-width: 1060px) {
+@media (min-width: 1040px) {
   .nav__links {
     display: flex;
   }

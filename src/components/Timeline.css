@@ -1,27 +1,27 @@
 .track {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 1.6rem;
+  padding: 0 0 0 1.5rem;
   border-left: 1px solid var(--rule);
   display: grid;
-  gap: clamp(2.25rem, 4vw, 3.25rem);
+  gap: clamp(2rem, 3.5vw, 3rem);
 }
 
 .track__item {
   position: relative;
   display: grid;
-  gap: 0.35rem;
+  gap: 0.3rem;
 }
 
 .track__dot {
   position: absolute;
-  left: calc(-1.6rem - 5px);
-  top: 0.5rem;
+  left: calc(-1.5rem - 4.5px);
+  top: 0.45rem;
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--paper);
-  border: 2px solid var(--indigo);
+  background: var(--blush);
+  border: 1.5px solid var(--mist);
 }
 
 .track__item--current .track__dot {
@@ -30,9 +30,8 @@
 }
 
 .track__period {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
+  font-family: var(--type);
+  font-size: 0.78rem;
   color: var(--mist);
 }
 
@@ -41,15 +40,14 @@
 }
 
 .track__org {
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  color: var(--indigo);
+  font-family: var(--type);
+  font-size: 0.82rem;
+  color: var(--rose);
 }
 
 .track__body {
-  margin-top: 0.45rem;
-  color: var(--ink-soft);
+  margin-top: 0.4rem;
+  color: var(--wine-soft);
   max-width: 62ch;
 }
 
@@ -59,18 +57,18 @@
   }
 
   .track__dot {
-    left: calc(-2.25rem - 5px);
+    left: calc(-2.25rem - 4.5px);
   }
 
   .track__item {
-    grid-template-columns: 12.5rem minmax(0, 1fr);
+    grid-template-columns: 11rem minmax(0, 1fr);
     column-gap: 2.5rem;
     align-items: start;
   }
 
   .track__period {
     grid-row: 1 / span 3;
-    padding-top: 0.35rem;
+    padding-top: 0.3rem;
   }
 
   .track__role,

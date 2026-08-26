@@ -1,0 +1,32 @@
+.section {
+  padding-block: var(--stack);
+  border-top: 1px solid var(--rule);
+}
+
+.section__head {
+  display: grid;
+  gap: 1.4rem;
+  margin-bottom: clamp(2.5rem, 4.5vw, 3.75rem);
+}
+
+.section__title {
+  font-size: clamp(1.85rem, 1.3rem + 2.2vw, 3.1rem);
+  margin-top: 0.9rem;
+  max-width: 18ch;
+}
+
+.section__lede {
+  align-self: end;
+}
+
+@media (min-width: 900px) {
+  .section__head {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 3rem;
+    align-items: end;
+  }
+
+  .section__lede {
+    padding-bottom: 0.4rem;
+  }
+}

@@ -1,0 +1,84 @@
+.cases {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.case {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: clamp(1.35rem, 2.6vw, 1.9rem);
+  transition:
+    border-color 0.25s var(--ease),
+    box-shadow 0.25s var(--ease),
+    transform 0.25s var(--ease),
+    opacity 0.7s var(--ease);
+}
+
+.case:hover {
+  border-color: var(--indigo);
+  box-shadow: 0 18px 40px -32px rgb(20 22 31 / 0.55);
+}
+
+.case__label {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  background: var(--indigo-tint);
+  display: inline-block;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+}
+
+.case__title {
+  font-size: 1.22rem;
+  margin-top: 0.9rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.case__fields {
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.case__field {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.case__field dt {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+
+.case__field dd {
+  margin: 0;
+  font-size: 0.96rem;
+  color: var(--ink-soft);
+}
+
+.case__field--result dt {
+  color: var(--rose);
+}
+
+.case__field--result dd {
+  color: var(--ink);
+}
+
+@media (min-width: 880px) {
+  .cases {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+  }
+
+  .case__fields {
+    gap: 1.15rem;
+  }
+}

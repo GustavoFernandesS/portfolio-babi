@@ -1,0 +1,197 @@
+/* ============================================================
+   Barbara Paschoalini — design tokens
+   Concept: "ficha de perfil profissional" (assessment sheet)
+   ============================================================ */
+
+:root {
+  /* Color */
+  --ink: #14161f;
+  --ink-soft: #474d63;
+  --mist: #868da6;
+  --paper: #e9ebf2;
+  --paper-deep: #dfe2ee;
+  --card: #fbfbfd;
+  --rule: #d1d6e6;
+  --indigo: #2a31a8;
+  --indigo-tint: #e3e5f7;
+  --rose: #b23a63;
+  --rose-tint: #f6e4ea;
+
+  /* Type */
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Newsreader", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+
+  /* Space & measure */
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --stack: clamp(4.5rem, 9vw, 8.5rem);
+  --max: 1240px;
+  --radius: 3px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 0.75, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: clamp(1rem, 0.97rem + 0.15vw, 1.09rem);
+  line-height: 1.62;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.04;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--rose);
+  color: #fff;
+}
+
+/* ---------- shared primitives ---------- */
+
+/* Anchors must clear the sticky header. */
+.section,
+.contact,
+.hero {
+  scroll-margin-top: 84px;
+}
+
+.shell {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin: 0;
+}
+
+.lede {
+  font-size: clamp(1.06rem, 1rem + 0.4vw, 1.28rem);
+  color: var(--ink-soft);
+  max-width: 58ch;
+}
+
+.rule {
+  height: 1px;
+  background: var(--rule);
+  border: 0;
+  margin: 0;
+}
+
+/* Marks content the site owner still has to supply. */
+.todo {
+  color: var(--rose);
+  border-bottom: 1px dashed currentColor;
+  font-family: var(--mono);
+  font-size: 0.86em;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- reveal on scroll ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s var(--ease),
+    transform 0.7s var(--ease);
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---------- skip link ---------- */
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.75rem 1rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.skip:focus {
+  left: 0;
+}

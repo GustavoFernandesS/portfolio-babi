@@ -1,0 +1,81 @@
+.track {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.6rem;
+  border-left: 1px solid var(--rule);
+  display: grid;
+  gap: clamp(2.25rem, 4vw, 3.25rem);
+}
+
+.track__item {
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.track__dot {
+  position: absolute;
+  left: calc(-1.6rem - 5px);
+  top: 0.5rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--indigo);
+}
+
+.track__item--current .track__dot {
+  background: var(--rose);
+  border-color: var(--rose);
+}
+
+.track__period {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--mist);
+}
+
+.track__role {
+  font-size: 1.3rem;
+}
+
+.track__org {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--indigo);
+}
+
+.track__body {
+  margin-top: 0.45rem;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+@media (min-width: 900px) {
+  .track {
+    padding-left: 2.25rem;
+  }
+
+  .track__dot {
+    left: calc(-2.25rem - 5px);
+  }
+
+  .track__item {
+    grid-template-columns: 12.5rem minmax(0, 1fr);
+    column-gap: 2.5rem;
+    align-items: start;
+  }
+
+  .track__period {
+    grid-row: 1 / span 3;
+    padding-top: 0.35rem;
+  }
+
+  .track__role,
+  .track__org,
+  .track__body {
+    grid-column: 2;
+  }
+}

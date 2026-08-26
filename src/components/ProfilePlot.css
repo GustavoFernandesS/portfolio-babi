@@ -1,0 +1,156 @@
+.plot {
+  margin: 0;
+  background:
+    repeating-linear-gradient(
+      to right,
+      transparent 0 23px,
+      color-mix(in srgb, var(--rule) 32%, transparent) 23px 24px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 23px,
+      color-mix(in srgb, var(--rule) 32%, transparent) 23px 24px
+    ),
+    var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: clamp(1.1rem, 2.4vw, 1.7rem);
+  box-shadow: 0 22px 46px -34px rgb(20 22 31 / 0.5);
+}
+
+.plot__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.plot__title {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.plot__note {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+
+.plot__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  overflow: visible;
+}
+
+.plot__pole {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  fill: var(--ink-soft);
+}
+
+.plot__pole--left {
+  text-anchor: end;
+}
+
+.plot__pole--right {
+  text-anchor: start;
+  fill: var(--mist);
+}
+
+.plot__track {
+  stroke: color-mix(in srgb, var(--rule) 70%, var(--ink-soft));
+  stroke-width: 1;
+}
+
+.plot__tick {
+  stroke: color-mix(in srgb, var(--rule) 55%, var(--ink-soft));
+  stroke-width: 1;
+}
+
+.plot__line {
+  fill: none;
+  stroke: var(--indigo);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: plot-draw 1.35s var(--ease) 0.25s forwards;
+}
+
+.plot__mark {
+  fill: var(--card);
+  stroke: var(--indigo);
+  stroke-width: 2.4;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: plot-pop 0.45s var(--ease) forwards;
+}
+
+.plot__scale text {
+  font-family: var(--mono);
+  font-size: 9px;
+  fill: var(--mist);
+  text-anchor: middle;
+}
+
+.plot__caption {
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--rule);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  color: var(--mist);
+}
+
+@media (max-width: 620px) {
+  .plot__pole {
+    font-size: 13.5px;
+  }
+
+  .plot__scale text {
+    font-size: 11px;
+  }
+
+  .plot__note {
+    letter-spacing: 0.03em;
+  }
+}
+
+@keyframes plot-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes plot-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plot__line {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+  .plot__mark {
+    opacity: 1;
+    animation: none;
+  }
+}

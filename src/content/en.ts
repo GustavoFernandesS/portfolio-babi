@@ -1,0 +1,241 @@
+import type { Content } from "./types";
+
+export const en: Content = {
+  meta: {
+    title: "Barbara Paschoalini — HR & Organizational Behavior",
+    description:
+      "Project Consultant at Consultoria RH Junior (FGV and Mackenzie) and psychology student at Mackenzie. Recruiting, engagement surveys, performance reviews and career paths.",
+    htmlLang: "en",
+  },
+
+  nav: {
+    items: [
+      { href: "#metodo", label: "Method" },
+      { href: "#trajetoria", label: "Path" },
+      { href: "#entregas", label: "Work" },
+      { href: "#repertorio", label: "Learning" },
+      { href: "#competencias", label: "Skills" },
+      { href: "#contato", label: "Contact" },
+    ],
+    toggleLabel: "Ver em português",
+  },
+
+  hero: {
+    eyebrow: "HR and organizational behavior · São Paulo, Brazil",
+    name: "Barbara Paschoalini",
+    role: "Project Consultant · Consultoria RH Junior",
+    thesis: "I turn people diagnostics into a process the team can run without me.",
+    body: "I study Psychology at Mackenzie, fourth semester. I joined Consultoria RH Junior — a student-run consultancy from FGV and Mackenzie — as a trainee in March 2026, and became a Project Consultant in June. Today I run recruiting, engagement, performance review and career path projects for client companies: from the diagnosis to the leadership debrief.",
+    primaryCta: "Get in touch",
+    secondaryCta: "LinkedIn",
+    resumeCta: "Résumé (PDF)",
+    status: "Open to internships in recruiting, talent acquisition and org development",
+  },
+
+  profile: {
+    title: "Working-style profile",
+    note: "Self-report · 7-point scale",
+    rows: [
+      { left: "Evidence", right: "Intuition", value: 2 },
+      { left: "Process", right: "Improvisation", value: 2 },
+      { left: "Listening", right: "Directing", value: 3 },
+      { left: "Individual", right: "Collective", value: 6 },
+      { left: "Depth", right: "Speed", value: 3 },
+    ],
+    caption: "Illustrative instrument, not a psychometric measure.",
+  },
+
+  method: {
+    eyebrow: "How I work",
+    title: "Three stages, always in this order",
+    lede: "A junior enterprise teaches you one thing fast: clients do not buy reports, they buy a decision they can actually make. Every project runs through the same three stages.",
+    steps: [
+      {
+        key: "01",
+        title: "Diagnosis",
+        body: "Before proposing anything, I listen: to the leaders, to the team, and to whatever the company already measures. What the client asks for is rarely what the client needs.",
+      },
+      {
+        key: "02",
+        title: "Design",
+        body: "I build alongside the people who will use it — process, criteria and supporting material. If someone has to call me to apply it after handover, the material is incomplete.",
+      },
+      {
+        key: "03",
+        title: "Debrief",
+        body: "I show leadership what I found, what I recommend, and what I could not answer. An honest debrief is what makes a client call again.",
+      },
+    ],
+  },
+
+  timeline: {
+    eyebrow: "Path",
+    title: "From coursework to client delivery",
+    lede: "Three positions in six months at the same consultancy, with the degree running alongside.",
+    entries: [
+      {
+        role: "Project Consultant",
+        org: "Consultoria RH Junior",
+        period: "Jun 2026 — present",
+        body: "I run people-management projects with ownership of the client relationship: diagnosis, proposal, delivery and debrief. Recruiting and selection, job descriptions, engagement surveys, performance reviews and career paths.",
+        current: true,
+      },
+      {
+        role: "Projects Trainee",
+        org: "Consultoria RH Junior",
+        period: "May 2026 — Jun 2026",
+        body: "First contact with real client work. I supported delivery on recruiting, engagement, performance reviews and career paths, and learned the hard part: turning analysis into material the company can use on its own.",
+      },
+      {
+        role: "Trainee",
+        org: "Consultoria RH Junior",
+        period: "Mar 2026 — May 2026",
+        body: "Training in consulting process and HR practice, focused on organizational behavior, recruiting and people development.",
+      },
+      {
+        role: "BA in Psychology",
+        org: "Universidade Presbiteriana Mackenzie",
+        period: "Feb 2025 — Nov 2030",
+        body: "Fourth semester. Academic interest in neuropsychology, cognition and human behavior — the basis of how people decide and learn inside a work structure. Also worked on the organizing team of Psychology Week, in administration and communications.",
+      },
+    ],
+  },
+
+  cases: {
+    eyebrow: "Work",
+    title: "Projects, and what came out of them",
+    lede: "Each project by what changed for whoever received it, not by the effort it took.",
+    fields: { context: "Context", action: "What I did", result: "Result" },
+    items: [
+      {
+        label: "Career path · training project",
+        title: "Career track for Asfaltec",
+        context:
+          "Onboarding project at Consultoria RH Junior, using a case company: Asfaltec had no defined growth path for either its administrative or its operational side.",
+        action:
+          "With my group, I designed vertical career tracks for both areas, connecting progression, development and promotion criteria.",
+        result:
+          "We delivered the plan plus an Implementation Guide that was not in scope: a step-by-step for applying the track. The plan stopped being a PDF and became something the company can run on its own.",
+      },
+      {
+        label: "Consulting challenge · 1st place",
+        title: "Blueprint",
+        context:
+          "A challenge between teams: analyze a real business problem and defend a strategic proposal in front of a panel.",
+        action:
+          "I structured the analysis with my group, built the proposal and presented the solution to the judges.",
+        result:
+          "First place in that edition. The prize was a two-hour conversation with the HR team at IGC Partners, an M&A firm, including the partner who leads the area.",
+      },
+      {
+        label: "Consulting · client companies",
+        title: "HR projects for real clients",
+        context:
+          "Companies arrive with a symptom, not a diagnosis: a role that will not close, a misaligned team, reviews without criteria, a job nobody can describe.",
+        action:
+          "Recruiting and selection, engagement surveys, performance reviews and job descriptions — from the first diagnosis to the leadership debrief.",
+        result:
+          "{{FILL IN: number of projects or client companies, plus one concrete result, e.g. X roles filled, Y jobs described and signed off, survey response rate}}",
+      },
+    ],
+  },
+
+  repertoire: {
+    eyebrow: "Learning",
+    title: "The part of the education that is not on the syllabus",
+    lede: "Working with people takes a repertoire about companies. I go looking for the people already inside them.",
+    items: [
+      {
+        org: "Bruna Z. Russo · HR Director at BIC (Brazil and Argentina)",
+        meta: "Aug 2026",
+        detail:
+          "A conversation about HR tools in practice: how performance tracking, feedback and development support decisions rather than just routine.",
+      },
+      {
+        org: "IGC Partners",
+        meta: "Blueprint prize",
+        detail:
+          "Two hours with the HR partner and her team on process, culture and professional development inside an M&A firm.",
+      },
+      {
+        org: "Finscale",
+        meta: "Apr 2026",
+        detail:
+          "Strategic marketing training: how a support function connects to business goals — the same question I ask about HR.",
+      },
+      {
+        org: "Integration",
+        meta: "Mar 2026",
+        detail:
+          "A talk on the company's path and the real challenges of working in human resources.",
+      },
+      {
+        org: "Psychology Week · Mackenzie",
+        meta: "organizing team",
+        detail:
+          "Worked in administration and communications: planning and promoting the academic events.",
+      },
+    ],
+  },
+
+  skills: {
+    eyebrow: "Skills",
+    title: "What I bring into an HR team",
+    groups: [
+      {
+        title: "People",
+        items: [
+          "Recruiting & selection",
+          "Job descriptions",
+          "Engagement surveys",
+          "Performance reviews",
+          "Career paths",
+          "Organizational development",
+        ],
+      },
+      {
+        title: "Consulting & project",
+        items: [
+          "Organizational diagnosis",
+          "Proposal writing",
+          "Client management",
+          "Project management",
+          "Presenting to leadership",
+          "Teamwork",
+        ],
+      },
+      {
+        title: "Tools",
+        items: [
+          "Excel · Google Sheets",
+          "PowerPoint · Slides",
+          "Canva",
+          "{{FILL IN: ATS used, e.g. Gupy}}",
+          "{{FILL IN: other tools}}",
+        ],
+      },
+    ],
+    languagesTitle: "Languages",
+    languages: [
+      { name: "Portuguese", level: "Native", value: 5 },
+      { name: "English", level: "Fluent", value: 5 },
+      { name: "Spanish", level: "Intermediate", value: 3 },
+    ],
+  },
+
+  contact: {
+    eyebrow: "Contact",
+    title: "If your team needs someone who delivers and comes back with what was agreed, let's talk.",
+    body: "Looking for an internship in recruiting, talent acquisition, organizational development or people management — on-site in São Paulo, hybrid or remote.",
+    emailLabel: "Email",
+    linkedinLabel: "LinkedIn",
+    locationLabel: "Based in",
+    location: "São Paulo, Brazil",
+    pending: "FILL IN at src/site.ts",
+  },
+
+  footer: {
+    note: "Barbara Paschoalini · HR and organizational behavior",
+    credit: "Built by hand.",
+  },
+};

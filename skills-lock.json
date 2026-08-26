@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "copywriting-tone-of-voice-creator": {
+      "source": "samber/cc-skills",
+      "sourceType": "github",
+      "skillPath": "skills/copywriting-tone-of-voice-creator/SKILL.md",
+      "computedHash": "8d4161c38c470a1faebcfd5a00081752191c61bce9fef777b798932a2b60776f"
+    }
+  }
+}

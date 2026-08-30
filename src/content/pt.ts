@@ -82,26 +82,50 @@ export const pt: Content = {
         role: "Consultora de Projetos",
         org: "Consultoria RH Junior",
         period: "jun 2026 — atual",
-        body: "Conduzo projetos de gestão de pessoas com autonomia sobre o cliente: diagnóstico da necessidade, construção da proposta, execução e devolutiva. Recrutamento e seleção, descrição de cargos e funções, pesquisa de clima organizacional, avaliação de desempenho e plano de carreira.",
+        bullets: [
+          "Coordeno o Processo Seletivo Interno da Consultoria RH Junior.",
+          "Planejo e conduzo as etapas de recrutamento e seleção.",
+          "Faço triagem de currículos e análise de perfil.",
+          "Conduzo entrevistas e dinâmicas de grupo.",
+          "Acompanho o candidato do primeiro contato ao fim do processo.",
+          "Desenvolvo projetos de clima organizacional, descrição de cargos, plano de carreira e avaliação de desempenho.",
+        ],
         current: true,
       },
       {
         role: "Trainee de Projetos",
         org: "Consultoria RH Junior",
         period: "mai 2026 — jun 2026",
-        body: "Primeiro contato com projeto de cliente de verdade. Apoiei a execução em R&S, clima, avaliação de desempenho e plano de carreira, e aprendi a parte difícil: transformar análise em material que a empresa consegue usar sozinha.",
+        bullets: [
+          "Apoiei os processos de recrutamento e seleção.",
+          "Participei da triagem de currículos e das entrevistas.",
+          "Acompanhei candidatos ao longo do processo seletivo.",
+          "Apoiei projetos de gestão de pessoas.",
+          "Mantive o contato com clientes e com equipes multidisciplinares.",
+        ],
       },
       {
-        role: "Trainee",
+        role: "Trainee Geral",
         org: "Consultoria RH Junior",
         period: "mar 2026 — mai 2026",
-        body: "Formação em processo de consultoria e prática de RH, com foco em comportamento organizacional, recrutamento e desenvolvimento de pessoas.",
+        bullets: [
+          "Programa de formação passando pelos diversos setores da organização.",
+          "Desenvolvimento de competências em comunicação, gestão e consultoria.",
+        ],
       },
       {
         role: "Graduação em Psicologia",
         org: "Universidade Presbiteriana Mackenzie",
-        period: "fev 2025 — nov 2030",
-        body: "Quarto semestre. Interesse acadêmico em neuropsicologia, cognição e comportamento humano — a base de como as pessoas decidem e aprendem dentro de uma estrutura de trabalho. Atuei também na organização da Semana da Psicologia, nas áreas de administração e comunicação.",
+        period: "fev 2025 — nov 2029",
+        bullets: [
+          "Quarto semestre, com previsão de conclusão em novembro de 2029.",
+          "Interesse acadêmico em neuropsicologia, cognição e comportamento humano: a base de como as pessoas decidem e aprendem dentro de uma estrutura de trabalho.",
+        ],
+      },
+      {
+        role: "Ensino Médio",
+        org: "Colégio Objetivo Paulista",
+        period: "conclusão em nov 2024",
       },
     ],
   },
@@ -136,7 +160,7 @@ export const pt: Content = {
         label: "Consultoria · empresas clientes",
         title: "Projetos de RH em cliente real",
         context:
-          "As empresas chegam com sintoma, não com diagnóstico: vaga que não fecha, time desalinhado, avaliação sem critério, cargo que ninguém sabe descrever.",
+          "Coordenação do Processo Seletivo Interno da Consultoria RH Júnior.",
         action:
           "Recrutamento e seleção, pesquisa de clima organizacional, avaliação de desempenho e descrição de cargos e funções — do diagnóstico inicial à devolutiva para a liderança.",
         result:
@@ -176,9 +200,9 @@ export const pt: Content = {
       },
       {
         org: "Semana da Psicologia · Mackenzie",
-        meta: "organização",
+        meta: "coordenação",
         detail:
-          "Atuei nas áreas de administração e comunicação: planejamento e divulgação dos eventos acadêmicos.",
+          "Coordenei as áreas administrativa e de comunicação: organização dos eventos, comunicação com participantes, onboarding, gestão de cronograma e suporte administrativo.",
       },
     ],
   },

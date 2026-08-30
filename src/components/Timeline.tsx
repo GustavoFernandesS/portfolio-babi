@@ -26,9 +26,16 @@ export function Timeline({ content }: { content: Content }) {
             </p>
             <h3 className="track__role">{entry.role}</h3>
             <p className="track__org">{entry.org}</p>
-            <p className="track__body">
-              <RichText text={entry.body} />
-            </p>
+
+            {entry.bullets?.length ? (
+              <ul className="track__duties">
+                {entry.bullets.map((bullet) => (
+                  <li key={bullet}>
+                    <RichText text={bullet} />
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </li>
         ))}
       </ol>

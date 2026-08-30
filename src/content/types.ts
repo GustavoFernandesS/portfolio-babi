@@ -27,7 +27,8 @@ export interface TimelineEntry {
   role: string;
   org: string;
   period: string;
-  body: string;
+  /** Atribuições, uma por item. Omitido quando a entrada só marca a data. */
+  bullets?: string[];
   current?: boolean;
 }
 

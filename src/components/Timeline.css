@@ -45,10 +45,27 @@
   color: var(--rose);
 }
 
-.track__body {
-  margin-top: 0.4rem;
+/* Atribuições: bolinha por item, na cor do acento. */
+.track__duties {
+  margin: 0.7rem 0 0;
+  padding-left: 1.1rem;
+  list-style: disc;
   color: var(--wine-soft);
   max-width: 62ch;
+}
+
+.track__duties li {
+  padding-left: 0.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.track__duties li:last-child {
+  margin-bottom: 0;
+}
+
+.track__duties li::marker {
+  color: var(--rose);
+  font-size: 0.9em;
 }
 
 @media (min-width: 900px) {
@@ -73,7 +90,7 @@
 
   .track__role,
   .track__org,
-  .track__body {
+  .track__duties {
     grid-column: 2;
   }
 }

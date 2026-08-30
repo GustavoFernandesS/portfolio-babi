@@ -18,7 +18,6 @@ export function Hero({ content }: { content: Content }) {
 
         <div className="hero__grid">
           <div className="hero__lead">
-            <p className="hero__thesis">{hero.thesis}</p>
 
             <dl className="record">
               {hero.fields.map((field) => (

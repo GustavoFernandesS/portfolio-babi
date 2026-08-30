@@ -10,7 +10,6 @@ export const pt: Content = {
 
   nav: {
     items: [
-      { href: "#metodo", label: "Método" },
       { href: "#trajetoria", label: "Trajetória" },
       { href: "#entregas", label: "Entregas" },
       { href: "#repertorio", label: "Repertório" },
@@ -48,29 +47,6 @@ export const pt: Content = {
       { left: "Profundidade", right: "Velocidade", value: 3 },
     ],
     caption: "Instrumento ilustrativo, sem valor psicométrico.",
-  },
-
-  method: {
-    eyebrow: "Como eu trabalho",
-    title: "Três etapas, sempre nesta ordem",
-    lede: "Empresa júnior ensina uma coisa cedo: cliente não compra relatório, compra decisão que ele consegue tomar. Por isso todo projeto passa pelas mesmas três etapas.",
-    steps: [
-      {
-        key: "01",
-        title: "Diagnóstico",
-        body: "Antes de propor, eu escuto: conversa com a liderança, conversa com o time e leitura do que a empresa já mede. O que o cliente pede raramente é o que o cliente precisa.",
-      },
-      {
-        key: "02",
-        title: "Desenho",
-        body: "Construo junto de quem vai usar — processo, critério e material de apoio. Se depois da entrega alguém precisar me ligar para conseguir aplicar, o material está incompleto.",
-      },
-      {
-        key: "03",
-        title: "Devolutiva",
-        body: "Apresento para a liderança o que encontrei, o que recomendo e o que não deu para responder. Devolutiva honesta é o que faz o cliente chamar de novo.",
-      },
-    ],
   },
 
   timeline: {

@@ -17,12 +17,6 @@ export interface ProfileRow {
   value: number;
 }
 
-export interface Step {
-  key: string;
-  title: string;
-  body: string;
-}
-
 export interface TimelineEntry {
   role: string;
   org: string;
@@ -77,7 +71,6 @@ export interface Content {
     status: string;
   };
   profile: { title: string; note: string; rows: ProfileRow[]; caption: string };
-  method: { eyebrow: string; title: string; lede: string; steps: Step[] };
   timeline: { eyebrow: string; title: string; lede: string; entries: TimelineEntry[] };
   cases: {
     eyebrow: string;

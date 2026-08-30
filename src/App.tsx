@@ -1,7 +1,6 @@
 import { Cases } from "./components/Cases";
 import { Contact } from "./components/Contact";
 import { Hero } from "./components/Hero";
-import { Method } from "./components/Method";
 import { Nav } from "./components/Nav";
 import { Repertoire } from "./components/Repertoire";
 import { Skills } from "./components/Skills";
@@ -23,7 +22,6 @@ export default function App() {
 
       <main id="main">
         <Hero content={content} />
-        <Method content={content} />
         <Timeline content={content} />
         <Cases content={content} />
         <Repertoire content={content} />

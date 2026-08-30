@@ -10,7 +10,6 @@ export const en: Content = {
 
   nav: {
     items: [
-      { href: "#metodo", label: "Method" },
       { href: "#trajetoria", label: "Path" },
       { href: "#entregas", label: "Work" },
       { href: "#repertorio", label: "Learning" },
@@ -48,29 +47,6 @@ export const en: Content = {
       { left: "Depth", right: "Speed", value: 3 },
     ],
     caption: "Illustrative instrument, not a psychometric measure.",
-  },
-
-  method: {
-    eyebrow: "How I work",
-    title: "Three stages, always in this order",
-    lede: "A junior enterprise teaches you one thing fast: clients do not buy reports, they buy a decision they can actually make. Every project runs through the same three stages.",
-    steps: [
-      {
-        key: "01",
-        title: "Diagnosis",
-        body: "Before proposing anything, I listen: to the leaders, to the team, and to whatever the company already measures. What the client asks for is rarely what the client needs.",
-      },
-      {
-        key: "02",
-        title: "Design",
-        body: "I build alongside the people who will use it — process, criteria and supporting material. If someone has to call me to apply it after handover, the material is incomplete.",
-      },
-      {
-        key: "03",
-        title: "Debrief",
-        body: "I show leadership what I found, what I recommend, and what I could not answer. An honest debrief is what makes a client call again.",
-      },
-    ],
   },
 
   timeline: {

@@ -11,7 +11,6 @@ export function Timeline({ content }: { content: Content }) {
       id="trajetoria"
       eyebrow={timeline.eyebrow}
       title={timeline.title}
-      lede={timeline.lede}
     >
       <ol className="track">
         {timeline.entries.map((entry, i) => (

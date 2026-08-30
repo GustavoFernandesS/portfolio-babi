@@ -7,7 +7,7 @@ export function Cases({ content }: { content: Content }) {
   const { cases } = content;
 
   return (
-    <Section id="entregas" eyebrow={cases.eyebrow} title={cases.title} lede={cases.lede}>
+    <Section id="entregas" eyebrow={cases.eyebrow} title={cases.title}>
       <div className="cases">
         {cases.items.map((item, i) => (
           <article className="case reveal" key={`${item.label}-${i}`}>
